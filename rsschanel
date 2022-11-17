@@ -1,0 +1,10 @@
+def create_xml(item_count_next):
+    rss_file = open('rss{:.0f}.xml'.format(item_count_next/rows_in_rss), 'w', encoding="utf-8")
+    rss_file.write(
+    """<?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:yandex="http://news.yandex.ru"
+            xmlns:media="http://search.yahoo.com/mrss/"
+            xmlns:turbo="http://turbo.yandex.ru"
+            version="2.0">
+            <channel>""")
+    rss_file.close()
